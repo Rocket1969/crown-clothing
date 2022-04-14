@@ -5,7 +5,7 @@ import CartIcon from "../../components/cart-icon/Cart-Icon.component";
 import CartDropdown from "../../components/cart-dropdown/Cart-Dropdown.component";
 
 import { UserContext } from "../../contexts/user.context";
-import { CartConext } from "../../contexts/cart.context";
+import { CartContext } from "../../contexts/cart.context";
 
 import { ReactComponent as CrownLogo } from "../../assets/crown.svg";
 
@@ -14,7 +14,7 @@ import "./navigation.styles.scss";
 
 const Navigation = () => {
   const { currentUser } = useContext(UserContext);
-  const { isCartOpen } = useContext(CartConext);
+  const { isCartOpen } = useContext(CartContext);
 
   const signOutHandler = async () => {
     await signOutUser();
